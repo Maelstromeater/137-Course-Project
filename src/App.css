@@ -3,19 +3,133 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 5s linear;
   height: 80px;
 }
 
+.temperature-sample {
+    font-size: 1.25em;
+    color: cyan;
+    text-shadow: 0 0 3px darkcyan;
+}
+
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-image: url("https://www.umblat.ro/content/event/2015/12/03/18801/petrecerea-lawrence-club-lasertag-si-jocuri-14491341764270-resize.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: Orbitron;
+  font-style: italic; 
+  height: 300px;
   padding: 20px;
   color: white;
 }
 
 .App-intro {
   font-size: large;
+}
+
+nav{
+  font-size: large;
+}
+
+span.avatar{
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  position: relative;
+}
+
+span.avatar img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: auto; 
+  height: auto; 
+  max-width: 100%; 
+  max-height: 100%; 
+  margin: auto auto 0;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.profile{
+  border: 1px solid black;
+  padding: .5em;
+  margin-right: .5em;
+  margin-bottom: 1em;
+  position: relative;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+  padding: 10px;
+  background: white;
+  display: flex;
+  align-items: center; 
+  width: 375px;
+  height: 500px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.profile .name{
+  font-size: 2.5em;
+  display: block;
+}
+
+.Home-page hr{
+  width: 50%;
+}
+
+.Events .profile{
+  border: 1px solid black;
+  padding: .5em;
+  margin-right: .5em;
+  margin-bottom: 1em;
+  position: relative;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+  padding: 10px;
+  background: white;
+  display: flex;
+  align-items: center; 
+  width: 375px;
+  height: 250px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.Hours, .Costs{
+  width: 50%;
+  margin: auto;
+  vertical-align: top;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
+  padding-left: 25%;
+}
+
+.Price-pic, .Laser-watch{
+  width: 50%;
+  margin: auto;
+  vertical-align: top;
+  text-align: left;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.Price-pic img, .Laser-watch img{
+  width: 300px;
+  height: auto;
+}
+
+.Welcome, .History{
+  margin: auto;
+  box-sizing: border-box;
+  text-align: left;
+  width: 50%;
+}
+
+.Welcome-pic img{
+  width: 33%;
+  margin: auto;
 }
 
 @keyframes App-logo-spin {
