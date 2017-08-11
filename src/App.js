@@ -9,6 +9,15 @@ import {
 } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-104442306-1');
+
+function Analytics(props){
+ ReactGA.set({ page: props.location.pathname + props.location.search });
+ ReactGA.pageview(props.location.pathname + props.location.search);
+ return null;
+}
 
 class App extends Component {
   render() {
@@ -31,6 +40,7 @@ class App extends Component {
         <div className="Home-nav">
           <Router>
             <div>
+              <Route path="/" component={Analytics}/>
               <nav>
                 <a><Link to="/">Home</Link></a>
                 |
@@ -40,7 +50,8 @@ class App extends Component {
                 |
                 <a><Link to="/membership">Membership</Link></a>
               </nav>
-
+              
+              
               <Route exact path="/" component={HomePage}/>
               <Route path="/about" component={AboutPage}/>
               <Route path="/membership" component={MembershipPage}/>
@@ -347,5 +358,7 @@ function VideoEmbed(props) {
     </div>
   );
 }
+
+
 
 export default App;
